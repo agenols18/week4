@@ -3,6 +3,7 @@ class CreateMovies < ActiveRecord::Migration
     create_table :movies do |t|
       t.string :title
       t.integer :year
+      t.boolean :favorite
       t.timestamps
     end
   end

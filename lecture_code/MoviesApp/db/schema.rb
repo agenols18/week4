@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(:version => 20130425195111) do
   create_table "movies", :force => true do |t|
     t.string   "title"
     t.integer  "year"
+    t.boolean  "favorite"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
