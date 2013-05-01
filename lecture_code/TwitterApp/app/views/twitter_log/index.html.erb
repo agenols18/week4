@@ -1,0 +1,17 @@
+<h1>My Tweets</h1>
+
+<style>
+  .timestamp { color: red;}
+</style>
+<ul>
+  <% Tweet.order("tweeted_at desc").each do |t| %>
+    <li>
+      <%= t.description %>
+      <% if t.tweeted_at != nil %>
+        <span class="timestamp">
+          <%= time_ago_in_words(t.tweeted_at) %> ago
+        </span>
+      <% end %>
+    </li>
+  <% end %>
+</ul>
